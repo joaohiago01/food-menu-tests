@@ -19,8 +19,8 @@ public class SignInTest {
 	
 	@Test
 	void userHasLogin() throws SQLException {
-		when(clientService.signIn("hiago@gmail.com", "123")).thenReturn(client);
-		assertTrue("Esse Usuário Não Existe", 
-				clientService.signIn("hiago@gmail.com", "123") != null);
+			when(clientService.signIn("hiago@gmail.com", "123")).thenReturn(client);
+			assertTrue("Esse Usuário Não Existe", 
+					clientService.signIn("hiago@gmail.com", "123") != null);	
 	}
 }
