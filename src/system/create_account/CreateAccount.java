@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class CreateAccount {
 
@@ -25,7 +26,7 @@ public class CreateAccount {
 		assertTrue(webDriver.getTitle().contentEquals("Food Menu - Faça Parte"));
 		
 		WebElement inputName = webDriver.findElement(By.id("inputName"));
-		inputName.sendKeys("João Hiago Santos Sousa");
+		inputName.sendKeys("Hiago");
 		Thread.sleep(2000);
 		
 		WebElement inputEmail = webDriver.findElement(By.id("inputEmail"));
@@ -55,7 +56,7 @@ public class CreateAccount {
 		Thread.sleep(2000);
 		
 		WebElement inputDescription = webDriver.findElement(By.id("inputDescription"));
-		inputDescription.sendKeys("Melhor Pizzaria da Região!");
+		inputDescription.sendKeys("Melhor Pizzaria da Cidade");
 		Thread.sleep(2000);
 		
 		WebElement inputPhone = webDriver.findElement(By.id("inputPhone"));
@@ -86,10 +87,6 @@ public class CreateAccount {
 		inputNumber.sendKeys("123");
 		Thread.sleep(2000);
 		
-		WebElement inputAddtion = webDriver.findElement(By.id("inputAddtion"));
-		inputAddtion.sendKeys("Próximo A Tal Coisa");
-		Thread.sleep(2000);
-		
 		WebElement inputTimeBegin = webDriver.findElement(By.id("inputTimeBegin"));
 		inputTimeBegin.sendKeys("18:00");
 		Thread.sleep(2000);
@@ -98,44 +95,22 @@ public class CreateAccount {
 		inputTimeEnd.sendKeys("23:00");
 		Thread.sleep(2000);
 		
-		WebElement monday = webDriver.findElement(By.id("monday"));
-		monday.sendKeys("on");
-		monday.click();
-		Thread.sleep(2000);
-		
-		WebElement tuesday = webDriver.findElement(By.id("tuesday"));
-		tuesday.sendKeys("off");
-		tuesday.click();
-		Thread.sleep(2000);
-		
-		WebElement wednesday = webDriver.findElement(By.id("wednesday"));
-		wednesday.sendKeys("off");
-		wednesday.click();
-		Thread.sleep(2000);
-		
-		WebElement thursday = webDriver.findElement(By.id("thursday"));
-		thursday.sendKeys("off");
-		thursday.click();
-		Thread.sleep(2000);
+		Actions action = new Actions(webDriver);
 		
 		WebElement friday = webDriver.findElement(By.id("friday"));
-		friday.sendKeys("on");
-		friday.click();
+		action.moveToElement(friday).click().build().perform();
 		Thread.sleep(2000);
 		
 		WebElement saturday = webDriver.findElement(By.id("saturday"));
-		saturday.sendKeys("on");
-		saturday.click();
+		action.moveToElement(saturday).click().build().perform();
 		Thread.sleep(2000);
 		
 		WebElement sunday = webDriver.findElement(By.id("sunday"));
-		sunday.sendKeys("on");
-		sunday.click();
+		action.moveToElement(sunday).click().build().perform();
 		Thread.sleep(2000);
 		
 		WebElement customRadioDeliveryYes = webDriver.findElement(By.id("customRadioDeliveryYes"));
-		customRadioDeliveryYes.sendKeys("on");
-		customRadioDeliveryYes.click();
+		action.moveToElement(customRadioDeliveryYes).click().build().perform();
 		Thread.sleep(2000);
 		
 		WebElement buttonSubmitRestaurantRegister = webDriver.findElement(By.id("buttonSubmit"));

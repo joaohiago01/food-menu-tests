@@ -48,7 +48,7 @@ public class EditUser {
 		WebElement inputName = webDriver.findElement(By.id("inputName"));
 		inputName.clear();
 		Thread.sleep(1000);
-		inputName.sendKeys("Hiago");
+		inputName.sendKeys("Joao Hiago");
 		Thread.sleep(1000);
 
 		WebElement buttonSubmit = webDriver.findElement(By.id("buttonSubmit"));
