@@ -1,13 +1,15 @@
 package system;
 
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class AccessSystemWithoutLogin {
+public class AcessFoodMenuPage {
 
 	private WebDriver webDriver;
 
@@ -19,9 +21,14 @@ public class AccessSystemWithoutLogin {
 	
 	@Test
 	public void AccessSystem() throws InterruptedException {
-		webDriver.get("http://localhost:8080/food-menu-web/pages/main.jsp");
-		assertFalse(webDriver.getTitle().contentEquals("Food Menu"));
-		Thread.sleep(4000);
+		webDriver.get("http://localhost:8080/food-menu-web/pages/index.jsp");
+		assertTrue(webDriver.getTitle().contentEquals("Food Menu - Home"));
+		Thread.sleep(2000);
+		
+		WebElement acessFoodMenu = webDriver.findElement(By.id("acessFoodMenu"));
+		acessFoodMenu.click();
+		Thread.sleep(7000);
+		
 		webDriver.close();
 	}
 }

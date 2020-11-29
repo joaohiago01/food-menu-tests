@@ -118,7 +118,7 @@ public class CreateAccount {
 		Thread.sleep(2000);
 		
 		assertTrue(webDriver.getTitle().contentEquals("Food Menu"));
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		webDriver.close();
 	}
 	

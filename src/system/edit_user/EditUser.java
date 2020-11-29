@@ -27,46 +27,46 @@ public class EditUser {
 
 		WebElement inputEmail = webDriver.findElement(By.id("inputEmail"));
 		inputEmail.sendKeys("joao@gmail.com");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
 		WebElement inputPassword = webDriver.findElement(By.id("inputPassword"));
 		inputPassword.sendKeys("123456");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement buttonLogin = webDriver.findElement(By.id("buttonLogin"));
 		buttonLogin.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		assertTrue(webDriver.getTitle().contentEquals("Food Menu"));
 		
 		WebElement linkUserProfile = webDriver.findElement(By.id("linkUserProfile"));
 		linkUserProfile.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
 		assertTrue(webDriver.getTitle().contentEquals("Food Menu - Perfil"));
 
 		WebElement inputName = webDriver.findElement(By.id("inputName"));
 		inputName.clear();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		inputName.sendKeys("Joao Hiago");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement buttonSubmit = webDriver.findElement(By.id("buttonSubmit"));
 		buttonSubmit.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		assertTrue(webDriver.getTitle().contentEquals("Food Menu"));
 		
 		linkUserProfile = webDriver.findElement(By.id("linkUserProfile"));
 		linkUserProfile.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
 		assertTrue(webDriver.getTitle().contentEquals("Food Menu - Perfil"));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
 		inputName = webDriver.findElement(By.id("inputName"));
 	
-		assertEquals("Hiago", inputName.getAttribute("value"));
+		assertEquals("Joao Hiago", inputName.getAttribute("value"));
 		
 		Thread.sleep(4000);
 		webDriver.close();

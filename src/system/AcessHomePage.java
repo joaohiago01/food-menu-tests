@@ -18,9 +18,10 @@ public class AcessHomePage {
 	}
 	
 	@Test
-	public void AccessSystem() {
+	public void AccessSystem() throws InterruptedException {
 		webDriver.get("http://localhost:8080/food-menu-web/pages/index.jsp");
 		assertTrue(webDriver.getTitle().contentEquals("Food Menu - Home"));
+		Thread.sleep(7000);
 		webDriver.close();
 	}
 }

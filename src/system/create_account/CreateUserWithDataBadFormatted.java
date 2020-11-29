@@ -27,23 +27,23 @@ public class CreateUserWithDataBadFormatted {
 
 		WebElement inputName = webDriver.findElement(By.id("inputName"));
 		inputName.sendKeys("João Hiago Santos Sousa");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement inputEmail = webDriver.findElement(By.id("inputEmail"));
 		inputEmail.sendKeys("joaogmail.com");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement inputCpf = webDriver.findElement(By.id("inputCpf"));
 		inputCpf.sendKeys("123.456.789-10");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement inputPassword = webDriver.findElement(By.id("inputPassword"));
 		inputPassword.sendKeys("12345678910");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement buttonSubmit = webDriver.findElement(By.id("buttonSubmit"));
 		buttonSubmit.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		assertFalse(webDriver.getTitle().contentEquals("Food Menu - Cadastro Restaurante"));
 		Thread.sleep(4000);

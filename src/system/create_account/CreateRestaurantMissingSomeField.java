@@ -27,15 +27,15 @@ public class CreateRestaurantMissingSomeField {
 
 		WebElement inputCnpj = webDriver.findElement(By.id("inputCnpj"));
 		inputCnpj.sendKeys("12.345.678/0910-11");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement inputNameRestaurant = webDriver.findElement(By.id("inputNameRestaurant"));
 		inputNameRestaurant.sendKeys("Pizzaria Monteiro");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement buttonSubmitRestaurantRegister = webDriver.findElement(By.id("buttonSubmit"));
 		buttonSubmitRestaurantRegister.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		assertFalse(webDriver.getTitle().contentEquals("Food Menu"));
 		Thread.sleep(4000);

@@ -27,19 +27,19 @@ public class CreateAccountMissingSomeField {
 
 		WebElement inputName = webDriver.findElement(By.id("inputName"));
 		inputName.sendKeys("João Hiago Santos Sousa");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement inputEmail = webDriver.findElement(By.id("inputEmail"));
 		inputEmail.sendKeys("joao@gmail.com");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement inputPassword = webDriver.findElement(By.id("inputPassword"));
 		inputPassword.sendKeys("123456789");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		WebElement buttonSubmit = webDriver.findElement(By.id("buttonSubmit"));
 		buttonSubmit.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		assertFalse(webDriver.getTitle().contentEquals("Food Menu - Cadastro Restaurante"));
 		Thread.sleep(4000);
