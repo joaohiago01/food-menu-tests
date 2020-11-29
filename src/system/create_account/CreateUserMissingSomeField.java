@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class CreateAccountMissingSomeField {
+public class CreateUserMissingSomeField {
 
 	private WebDriver webDriver;
 
