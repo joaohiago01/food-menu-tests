@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class EditProduct {
 
@@ -58,6 +59,9 @@ public class EditProduct {
 		inputDescription.clear();
 		inputDescription.sendKeys("8 Fatias");
 		Thread.sleep(1000);
+		
+		Select inputCategory = new Select(webDriver.findElement(By.id("inputCategory")));
+		inputCategory.selectByVisibleText("Pizzas");
 		
 		WebElement buttonSubmit = webDriver.findElement(By.id("buttonSubmit"));
 		buttonSubmit.click();
