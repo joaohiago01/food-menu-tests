@@ -13,7 +13,7 @@ public class AcessHomePage {
 
 	@Before
 	public void configuration() {
-		System.setProperty("webdriver.edge.driver", "C:\\Users\\Cliente\\Downloads\\College\\TT\\food-menu-tests\\drivers\\msedgedriver.exe");
+		System.setProperty("webdriver.edge.driver", WebDriverPath.webDriverPath);
 		webDriver = new EdgeDriver();
 	}
 	

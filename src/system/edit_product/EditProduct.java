@@ -10,13 +10,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import system.WebDriverPath;
+
 public class EditProduct {
 
 	private WebDriver webDriver;
 
 	@Before
 	public void configuration() {
-		System.setProperty("webdriver.edge.driver", "C:\\Users\\Cliente\\Downloads\\College\\TT\\food-menu-tests\\drivers\\msedgedriver.exe");
+		System.setProperty("webdriver.edge.driver", WebDriverPath.webDriverPath);
 		webDriver = new EdgeDriver();
 	}
 
@@ -62,6 +64,7 @@ public class EditProduct {
 		
 		Select inputCategory = new Select(webDriver.findElement(By.id("inputCategory")));
 		inputCategory.selectByVisibleText("Pizzas");
+		Thread.sleep(1000);
 		
 		WebElement buttonSubmit = webDriver.findElement(By.id("buttonSubmit"));
 		buttonSubmit.click();

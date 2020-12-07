@@ -10,13 +10,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import system.WebDriverPath;
+
 public class EditUser {
 
 	private WebDriver webDriver;
 
 	@Before
 	public void configuration() {
-		System.setProperty("webdriver.edge.driver", "C:\\Users\\Cliente\\Downloads\\College\\TT\\food-menu-tests\\drivers\\msedgedriver.exe");
+		System.setProperty("webdriver.edge.driver", WebDriverPath.webDriverPath);
 		webDriver = new EdgeDriver();
 	}
 
